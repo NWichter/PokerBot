@@ -19,7 +19,7 @@ The contributors to this project were
 The goal of this machine learning project is to model and implement a PokerBot. This bot is based on an algorithm for games with imperfect information, a variant of Counterfactual Regret Minimization and the Nash equilibrium. 
 Furthermore, we implemented a GUI that can be used to play interactively against the bot. 
 
-In this repository you can find both the project report [project report](Dokumentation.pdf) and the [final presentation](Präsentation.pdf). 
+In this repository you can find both the project report [project report](Projektbericht_PokerBot.pdf) and the [final presentation](Präsentation_PokerBot.pdf). 
 
 <br />
 
