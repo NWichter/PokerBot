@@ -2,4 +2,5 @@ matplotlib==3.3.3
 numpy==1.19.4
 PyPokerEngine==1.0.1
 PyPokerGUI==0.0.7
+tornado==4.4.2
 
