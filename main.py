@@ -9,11 +9,11 @@ from mccfr import MCCFRBot
 from evaluation import create_graphs
 
 # Grundeinstellungen
-settings = {"iterations": 200,     # Anzahl an Trainingspielen
+settings = {"iterations": 5000,     # Anzahl an Trainingspielen
             "max_round": 10,           # Anzahl der maximalen Runden pro Spiel
             "initial_stack": 100,      # Anfangsbestand an Spielgeld
             "small_blind_amount": 5,   # Wert des Small Blind
-            "evaluation": True,       # Aktivieren für die Auswertung
+            "evaluation": False,       # Aktivieren für die Auswertung
             "showDetails": False}       # Anzeigen von Details während des Lernens
 
 stackp1_log, stackp2_log, stackp3_log, stackp4_log, stackp5_log = [], [], [], [], []

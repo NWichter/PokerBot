@@ -5,13 +5,16 @@ max_round: 10
 small_blind: 10
 ai_players:
 - name: fishplayer1
-  path: Users/nikla/Desktop/PokerBot/player/fish_player.py
+  path: /Users/nikla/Desktop/PokerBot/player/fish_player.py
   
 
 # Hinzufügen weiterer Spieler möglich
 # - name: Name des Spielers
 #   path: Pfad für den Algorithmus des Spielers 
 
-# weitere Beispiele:
-# - name: CallPlayer1
-#   path: Users/[Ordner des Algorithmus]/PokerBot/player/call_player.py
+# weitere Beispiele (trainierter Algorithmus):
+# - name: mccrfplayer
+#   path: Users/[Ordner des Algorithmus]/PokerBot/mccfr.py
+#
+# /player/
+# mögliche Algorithmen/(player): call_player.py, fish_player.py, honest_player.py, monte_carlo_player
