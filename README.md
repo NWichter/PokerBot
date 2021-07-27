@@ -46,7 +46,7 @@ pip install
 
 <br />
 
-### How to set it up
+### How to set it up (This part is currently not working due to a bug in the PyPokerGUI module!)
 After all required programs have been installed, the GUI can executed. 
 
 For the next step it is important to change/adjust the setting pokerconf.yml (folder path must be adjusted) --> you must be in the folder!
