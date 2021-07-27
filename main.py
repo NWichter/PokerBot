@@ -1,5 +1,4 @@
 import pickle
-import numpy as np
 from pypokerengine.api.game import start_poker, setup_config
 
 from player.call_player import CallBot
@@ -7,14 +6,15 @@ from player.honest_player import HonestBot
 from player.monte_carlo_player import MonteCarloBot
 
 from mccfr import MCCFRBot
+from evaluation import create_graphs
 
 # Grundeinstellungen
-settings = {"iterations": 100,     # Anzahl an Trainingspielen
+settings = {"iterations": 200,     # Anzahl an Trainingspielen
             "max_round": 10,           # Anzahl der maximalen Runden pro Spiel
             "initial_stack": 100,      # Anfangsbestand an Spielgeld
             "small_blind_amount": 5,   # Wert des Small Blind
             "evaluation": True,       # Aktivieren für die Auswertung
-            "showDetails": True}       # Anzeigen von Details während des Lernens
+            "showDetails": False}       # Anzeigen von Details während des Lernens
 
 stackp1_log, stackp2_log, stackp3_log, stackp4_log, stackp5_log = [], [], [], [], []
 
@@ -25,7 +25,7 @@ def main():
     p1.init_bot(True, settings["showDetails"])
     p2.init_bot(False)
 
-    for round in range(settings["iterations"]):
+    for round in range(1,settings["iterations"]+1):
 
         # Grundeinstellungen eines Pokerspiels
         config = setup_config(
@@ -53,8 +53,8 @@ def main():
         else:
             print("Runde:", round)
 
-        # nur wenn die Einstellung evaluation == True und unter 1000 Iterationen
-        if settings["evaluation"] and settings["iterations"] < 1001:
+        # nur wenn die Einstellung evaluation == True und unter 500 Iterationen
+        if settings["evaluation"] and settings["iterations"] < 501:
             # Auswertung eines Spiels
 
             stackp1_log.append(
@@ -71,7 +71,7 @@ def main():
             # Ausgabe des durchschnittlichen Pots des ersten Spieler (Algorithmus)
             #print('Avg. stack:', '%d' % (int(np.mean(stackp1_log))))
 
-    if settings["evaluation"] and settings["iterations"] < 1001:
+    if settings["evaluation"] and settings["iterations"] < 501:
         # Speichern einer Spieleauswertung
         file_name = f"results/evaluation_100_p1.pkl"
         with open(file_name, "wb") as f:
@@ -93,6 +93,7 @@ def main():
         with open(file_name, "wb") as f:
             pickle.dump(stackp5_log, f)
 
+        create_graphs()
 
 if __name__ == '__main__':
     main()

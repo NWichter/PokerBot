@@ -47,18 +47,21 @@ pip install
 <br />
 
 ### How to set it up
-After installing all  programs
 After all required programs have been installed, the GUI can executed. 
 
 For the next step it is important to change/adjust the setting pokerconf.yml (folder path must be adjusted) --> you must be in the folder!
 Furthermore, all other possible algorithms can be added by adding the appropriate path to the configuration file.
+
 After this, start the local server with the config file. 
 ```
-pypokergui serve pokerconf.yml –port 8000 –speed moderate
+pypokergui serve pokerconf.yml --port 8000 --speed moderate
 ```
 
 Then the browser will be opened and you will see registration page.
+
 Please register yourself on the page (for example with your name) and start the game.
+
 More information at: : https://github.com/ishikota/PyPokerGUI
-Have fun playing poker!joy poker!!
+
+Have fun playing poker!
 
