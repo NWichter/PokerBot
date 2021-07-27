@@ -54,7 +54,7 @@ Furthermore, all other possible algorithms can be added by adding the appropriat
 
 After this, start the local server with the config file. 
 ```
-pypokergui serve pokerconf.yml --port 8000 --speed moderate
+pypokergui serve poker_conf.yml --port 8000 --speed moderate
 ```
 
 Then the browser will be opened and you will see registration page.

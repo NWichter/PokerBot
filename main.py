@@ -25,7 +25,7 @@ def main():
     p1.init_bot(True, settings["showDetails"])
     p2.init_bot(False)
 
-    for round in range(1,settings["iterations"]+1):
+    for round in range(1, settings["iterations"]+1):
 
         # Grundeinstellungen eines Pokerspiels
         config = setup_config(
@@ -94,6 +94,7 @@ def main():
             pickle.dump(stackp5_log, f)
 
         create_graphs()
+
 
 if __name__ == '__main__':
     main()
